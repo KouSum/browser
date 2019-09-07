@@ -93,6 +93,10 @@
             'Mobile': u.indexOf('Mobi') > -1 || u.indexOf('iPh') > -1 || u.indexOf('480') > -1,
             'Tablet': u.indexOf('Tablet') > -1 || u.indexOf('Pad') > -1 || u.indexOf('Nexus 7') > -1
         };
+        _this.chromeV='no';
+        if(match['Chrome']){
+            _this.chromeV=u.replace(/^.*Chrome\/([\d]+).*$/, '$1');
+        }
         var is360 = false;
         if(_window.chrome){
             var chrome_vision = u.replace(/^.*Chrome\/([\d]+).*$/, '$1');
